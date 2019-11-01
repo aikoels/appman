@@ -13,7 +13,7 @@ A local interface which makes REST calls to various devops tools to allow for re
 ## Class Notes
 This was built for IS4300 at Northeastern University for the Fall 2019 semester. 
 
-| Assignment Name | Branch for Code | 
+| Assignment Name | Branch Hosting Code | 
 | --------------- | --------------- |
 | Computer Prototyping - 6 | Branch_Name |
 | Hueristic Eval Revision - 7 | Branch_Name |
