@@ -115,7 +115,7 @@ public class Main extends javax.swing.JFrame {
 
     private void NewAppButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButtonActionPerformed
         // TODO add your handling code here:
-        new CreateNewForm().main(null);
+        new CreateNewForm(ComponentType.APPLICATION).main(null);
     }//GEN-LAST:event_NewAppButtonActionPerformed
 
     /**

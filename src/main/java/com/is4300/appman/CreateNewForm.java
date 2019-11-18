@@ -11,10 +11,14 @@ package com.is4300.appman;
  */
 public class CreateNewForm extends javax.swing.JFrame {
 
+    //Type of component being created
+    private ComponentType type;
+    
     /**
      * Creates new form CreateNewForm
      */
-    public CreateNewForm() {
+    public CreateNewForm(ComponentType type) {
+        this.type = type;
         initComponents();
     }
 

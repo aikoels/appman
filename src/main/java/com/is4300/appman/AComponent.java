@@ -23,6 +23,7 @@ import javax.swing.JFrame;
 public abstract class AComponent {
 
     private Map<String, String> config;
+    private ComponentType type;
     private User owner;
     private Status status;
     private List<Event> log;
@@ -31,9 +32,10 @@ public abstract class AComponent {
      * Creates AComponent using the supplied configuration and logs the
      * creation.
      */
-    public AComponent(User owner) {
+    public AComponent(User owner, ComponentType type) {
         try {
             //Successful Creation
+            this.type = type;
             this.config = new HashMap<String, String>();
             this.owner = owner;
             this.status = SUCCESS;
