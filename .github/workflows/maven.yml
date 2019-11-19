@@ -1,6 +1,8 @@
 name: Java CI
 
-on: [push]
+on: 
+  push:
+    tags: release
 
 jobs:
   build:
@@ -25,3 +27,4 @@ jobs:
       with:
     # File to upload to the release
        file: ./target/*.jar
+       tag: "1.0"
