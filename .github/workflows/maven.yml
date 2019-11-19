@@ -1,6 +1,8 @@
 name: Java CI
 
-on: [push]
+on: 
+  push:
+    branches: "release-*"
 
 jobs:
   build:
@@ -20,3 +22,9 @@ jobs:
       with:
         name: AppMan
         path: .
+    - name: Action Release
+      uses: yakuhzi/action-release@v1.2.0
+      with:
+    # File to upload to the release
+       file: ./target/*.jar
+       tag: branch
