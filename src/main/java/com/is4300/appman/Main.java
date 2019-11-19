@@ -360,6 +360,7 @@ public class Main extends javax.swing.JFrame {
         this.user.setName(jTextField1.getText());
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    //test
     /**
      * @param args the command line arguments
      */
