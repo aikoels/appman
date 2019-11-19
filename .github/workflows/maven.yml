@@ -27,4 +27,4 @@ jobs:
       with:
     # File to upload to the release
        file: ./target/*.jar
-       tag: branch
+       tag: "1.0"
