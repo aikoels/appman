@@ -23,8 +23,25 @@ jobs:
         name: AppMan
         path: .
     - name: Create Release
-      uses: ncipollo/release-action #@v1
+      uses: ncipollo/release-action@v1
       with:
-        name: ${{ github.ref }}
-        artifacts: "target/*.jar"
-        token: ${{ secrets.GITHUB_TOKEN }}
+        # An optional set of paths representing artifacts to upload to the release. This may be a single path or a comma delimited list of paths (or globs)
+        artifact: 'target/*.jar' # optional, default is 
+        # An optional set of paths representing artifacts to upload to the release. This may be a single path or a comma delimited list of paths (or globs)
+        #artifacts: # optional, default is 
+        # The content type of the artifact. Defaults to raw
+        #artifactContentType: # optional, default is 
+        # An optional body for the release.
+        #body: # optional, default is 
+        # An optional body file for the release. This should be the path to the file
+        #bodyFile: # optional, default is 
+        # An optional commit reference. This will be used to create the tag if it does not exist.
+        #commit: # optional, default is 
+        # Optionally marks this release as a draft release. Set to true to enable.
+        #draft: # optional, default is 
+        # An optional name for the release. If this is omitted the tag will be used.
+        name: ${{ github.ref }} # optional, default is 
+        # An optional tag for the release. If this is omitted the git ref will be used (if it is a tag).
+        tag: ${{ github.ref }} # optional, default is 
+        # The Github token.
+        token: ${{  secrets.GITHUB_TOKEN }} # default is 
