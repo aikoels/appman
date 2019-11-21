@@ -4,8 +4,13 @@ Application Management UI
 This is a Local Java Application designed to monitor, create, and manage multiple types of Applications 
 and Infrastructure from one user friendly portal.
 
-## Instructions to Setup:
-Our application is an executable application, therefore we recommend using NetBeans.
+## First Time Setup:
+1. If not already installed on your machine, download and install [Apache Maven](https://maven.apache.org/install.html).
+2. Navigate to the [Releases Tab](https://github.com/aikoels/appman/releases) on the project's Github. 
+3. On the top-most release, click on `Source Code.zip` under the assets.
+4. Expand `Source Code.zip` and navigate to the folder.
+5. Double click on either `windows-build.bat` or `mac-build.bat` depending on your operating system. 
+6. After the script is complete running double click the `.jar` file in the source code directory.
 
 ## Briefing
 “This application is tailored to developers who want to create or maintain their application. 
@@ -22,19 +27,8 @@ and complete them all. You can complete these tasks in any order. Got it?”
 ### MVP
 A local interface which simulates the functionality of appman.
 
-### Version 1.0
-A local interface which makes REST calls to various devops tools to allow for real functionality.
-
 ## Class Notes
 This was built for IS4300 at Northeastern University for the Fall 2019 semester. 
-
-| Assignment Name | Branch Hosting Code | 
-| --------------- | --------------- |
-| Computer Prototyping - 6 | Branch_Name |
-| Hueristic Eval Revision - 7 | Branch_Name |
-
-## Building AppMan
-Too build AppMan from its source code...
 
 ## Using AppMan
 Talk about the lego metaphor.
@@ -56,4 +50,4 @@ Talk about the lego metaphor.
 2. ...
 
 
-[Netbeans Guide to WebApps](https://netbeans.org/kb/docs/web/quickstart-webapps.html)
+
