@@ -469,18 +469,22 @@ public class Main extends javax.swing.JFrame {
 
     private void NewInfraButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewInfraButton1ActionPerformed
         // TODO add your handling code here:
+        new CreateNewForm(ComponentType.INFRASTRUCTURE).setVisible(true);
     }//GEN-LAST:event_NewInfraButton1ActionPerformed
 
     private void NewAppButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButton5ActionPerformed
         // TODO add your handling code here:
+        new CreateNewForm(ComponentType.APPLICATION).setVisible(true);
     }//GEN-LAST:event_NewAppButton5ActionPerformed
 
     private void NewAppButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButton6ActionPerformed
         // TODO add your handling code here:
+        new PopUp(PopUpType.ErrorApp).setVisible(true);
     }//GEN-LAST:event_NewAppButton6ActionPerformed
 
     private void NewAppButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButton7ActionPerformed
         // TODO add your handling code here:
+        new PopUp(PopUpType.ErrorInfra).setVisible(true);
     }//GEN-LAST:event_NewAppButton7ActionPerformed
 
     /**
