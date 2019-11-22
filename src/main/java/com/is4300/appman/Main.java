@@ -30,6 +30,14 @@ public class Main extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         DashTab = new javax.swing.JPanel();
+        NewInfraButton1 = new javax.swing.JButton();
+        NewAppButton5 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        NewAppButton6 = new javax.swing.JButton();
+        NewAppButton7 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         AppTab = new javax.swing.JPanel();
         NewAppButton = new javax.swing.JButton();
         NewAppButton1 = new javax.swing.JButton();
@@ -63,15 +71,100 @@ public class Main extends javax.swing.JFrame {
 
         DashTab.setBackground(new java.awt.Color(179, 217, 255));
 
+        NewInfraButton1.setText("Create New Infrastructure!");
+        NewInfraButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewInfraButton1ActionPerformed(evt);
+            }
+        });
+
+        NewAppButton5.setText("Create New Application!");
+        NewAppButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewAppButton5ActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setText("Alerts:");
+
+        NewAppButton6.setBackground(new java.awt.Color(240, 20, 20));
+        NewAppButton6.setText("Error: App1");
+        NewAppButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewAppButton6ActionPerformed(evt);
+            }
+        });
+
+        NewAppButton7.setBackground(new java.awt.Color(240, 20, 20));
+        NewAppButton7.setText("Error: Server1");
+        NewAppButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewAppButton7ActionPerformed(evt);
+            }
+        });
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("This is a work in progress. \nIt will show application and server statistics");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout DashTabLayout = new javax.swing.GroupLayout(DashTab);
         DashTab.setLayout(DashTabLayout);
         DashTabLayout.setHorizontalGroup(
             DashTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGroup(DashTabLayout.createSequentialGroup()
+                .addGroup(DashTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DashTabLayout.createSequentialGroup()
+                        .addGroup(DashTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DashTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(DashTabLayout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addGroup(DashTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(DashTabLayout.createSequentialGroup()
+                                        .addComponent(NewAppButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(NewAppButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(DashTabLayout.createSequentialGroup()
+                                        .addComponent(NewInfraButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(NewAppButton5)))))
+                        .addGap(0, 25, Short.MAX_VALUE))
+                    .addGroup(DashTabLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         DashTabLayout.setVerticalGroup(
             DashTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 273, Short.MAX_VALUE)
+            .addGroup(DashTabLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(DashTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NewInfraButton1)
+                    .addComponent(NewAppButton5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(DashTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NewAppButton6)
+                    .addComponent(NewAppButton7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Dashboard", DashTab);
@@ -138,7 +231,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(AppTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NewAppButton1)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 114, Short.MAX_VALUE))
+                .addGap(0, 115, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Applications", AppTab);
@@ -178,41 +271,36 @@ public class Main extends javax.swing.JFrame {
             InfraTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfraTabLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(NewInfraButton)
-                .addContainerGap(228, Short.MAX_VALUE))
-            .addGroup(InfraTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(InfraTabLayout.createSequentialGroup()
-                    .addGap(65, 65, 65)
-                    .addGroup(InfraTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(InfraTabLayout.createSequentialGroup()
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(NewAppButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfraTabLayout.createSequentialGroup()
-                            .addGap(13, 13, 13)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(NewAppButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(65, 65, 65)))
+                .addGroup(InfraTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(InfraTabLayout.createSequentialGroup()
+                        .addComponent(NewInfraButton)
+                        .addGap(0, 108, Short.MAX_VALUE))
+                    .addGroup(InfraTabLayout.createSequentialGroup()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NewAppButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfraTabLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
+                        .addComponent(NewAppButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         InfraTabLayout.setVerticalGroup(
             InfraTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfraTabLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(NewInfraButton)
-                .addContainerGap(242, Short.MAX_VALUE))
-            .addGroup(InfraTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(InfraTabLayout.createSequentialGroup()
-                    .addGap(84, 84, 84)
-                    .addGroup(InfraTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(NewAppButton4)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(63, 63, 63)
-                    .addGroup(InfraTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(NewAppButton3)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(84, Short.MAX_VALUE)))
+                .addGap(32, 32, 32)
+                .addGroup(InfraTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NewAppButton4)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(63, 63, 63)
+                .addGroup(InfraTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NewAppButton3)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Insfrastructure", InfraTab);
@@ -379,6 +467,22 @@ public class Main extends javax.swing.JFrame {
         jLabel8.setText(this.user.getName());
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void NewInfraButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewInfraButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NewInfraButton1ActionPerformed
+
+    private void NewAppButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NewAppButton5ActionPerformed
+
+    private void NewAppButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NewAppButton6ActionPerformed
+
+    private void NewAppButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NewAppButton7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -425,10 +529,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton NewAppButton2;
     private javax.swing.JButton NewAppButton3;
     private javax.swing.JButton NewAppButton4;
+    private javax.swing.JButton NewAppButton5;
+    private javax.swing.JButton NewAppButton6;
+    private javax.swing.JButton NewAppButton7;
     private javax.swing.JButton NewInfraButton;
+    private javax.swing.JButton NewInfraButton1;
     private javax.swing.JPanel SettingTab;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -438,7 +547,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
