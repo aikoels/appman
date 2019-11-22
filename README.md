@@ -4,7 +4,13 @@ Application Management UI
 This is a Local Java Application designed to monitor, create, and manage multiple types of Applications 
 and Infrastructure from one user friendly portal.
 
-## First Time Setup:
+## Running AppMan:
+1. Navigate to the [Releases Tab](https://github.com/aikoels/appman/releases) on the project's Github. 
+2. On the top-most release, click on the `.jar` file to download. 
+3. Double click the `.jar` file to run.
+
+If the above steps do not work, try:
+
 1. If not already installed on your machine, download and install [Apache Maven](https://maven.apache.org/install.html).
 2. Navigate to the [Releases Tab](https://github.com/aikoels/appman/releases) on the project's Github. 
 3. On the top-most release, click on `Source Code.zip` under the assets.
