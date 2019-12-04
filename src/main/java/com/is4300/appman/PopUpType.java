@@ -10,5 +10,5 @@ package com.is4300.appman;
  * @author quinc
  */
 public enum PopUpType {
-    NewInfra, NewApp, ErrorApp, ErrorInfra, Error;
+    NewInfra, NewApp, ErrorApp, ErrorInfra, Error, InfraTutorial, AppTutorial;
 }

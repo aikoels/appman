@@ -20,78 +20,45 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" max="32767" attributes="0"/>
-                  <Component id="jLabel3" alignment="1" max="32767" attributes="0"/>
-                  <Component id="jLabel4" alignment="1" max="32767" attributes="0"/>
-                  <Component id="jLabel5" alignment="0" pref="314" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel7" min="-2" pref="306" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jLabel2" min="-2" pref="25" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jLabel4" min="-2" pref="23" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="32767" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="78" max="-2" attributes="0"/>
+              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLabel7" pref="151" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Error with an Application!"/>
+        <Property name="text" type="java.lang.String" value="Hello! Welcome to AppMan!"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Application: App1"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
-      <Properties>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Error: 500 HTTPS"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
-      <Properties>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Infrastructure: Server1"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-      <Properties>
-        <Property name="horizontalScrollBar" type="javax.swing.JScrollBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="null"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;In the screen behind this you should see a section to the left,&quot;&#xa;+ &quot; this is your workbench. Your workbench will show you your tech stack as you&quot;&#xa;+ &quot;create it. On the right is your toolbox. These are the various technologies&quot;&#xa;+ &quot;available to you.&quot;" type="code"/>
         </Property>
       </Properties>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
-          <Properties>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="javax.servlet.ServletException: Something bad happened&#xa;    at com.example.myproject.OpenSessionInViewFilter.doFilter(OpenSessionInViewFilter.java:60)&#xa;    at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)&#xa;    at com.example.myproject.ExceptionHandlerFilter.doFilter(ExceptionHandlerFilter.java:28)&#xa;    at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)&#xa;    at com.example.myproject.OutputBufferFilter.doFilter(OutputBufferFilter.java:33)&#xa;    at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)&#xa;    at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)&#xa;    at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)&#xa;    at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)&#xa;    at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)&#xa;    at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)&#xa;    at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)&#xa;    at org.mortbay.jetty.Server.handle(Server.java:326)&#xa;    at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)&#xa;    at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:943)&#xa;    at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:756)&#xa;    at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)&#xa;    at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)&#xa;    at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)&#xa;    at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)&#xa;Caused by: com.example.myproject.MyProjectServletException&#xa;    at com.example.myproject.MyServlet.doPost(MyServlet.java:169)&#xa;    at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)&#xa;    at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)&#xa;    at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)&#xa;    at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1166)&#xa;    at com.example.myproject.OpenSessionInViewFilter.doFilter(OpenSessionInViewFilter.java:30)&#xa;    ... 27 more&#xa;Caused by: org.hibernate.exception.ConstraintViolationException: could not insert: [com.example.myproject.MyEntity]&#xa;    at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:96)&#xa;    at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)&#xa;    at org.hibernate.id.insert.AbstractSelectingDelegate.performInsert(AbstractSelectingDelegate.java:64)&#xa;    at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2329)&#xa;    at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2822)&#xa;    at org.hibernate.action.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:71)&#xa;    at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:268)&#xa;    at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:321)&#xa;    at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:204)&#xa;    at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:130)&#xa;    at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.saveWithGeneratedOrRequestedId(DefaultSaveOrUpdateEventListener.java:210)&#xa;    at org.hibernate.event.def.DefaultSaveEventListener.saveWithGeneratedOrRequestedId(DefaultSaveEventListener.java:56)&#xa;    at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.entityIsTransient(DefaultSaveOrUpdateEventListener.java:195)&#xa;    at org.hibernate.event.def.DefaultSaveEventListener.performSaveOrUpdate(DefaultSaveEventListener.java:50)&#xa;    at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:93)&#xa;    at org.hibernate.impl.SessionImpl.fireSave(SessionImpl.java:705)&#xa;    at org.hibernate.impl.SessionImpl.save(SessionImpl.java:693)&#xa;    at org.hibernate.impl.SessionImpl.save(SessionImpl.java:689)&#xa;    at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)&#xa;    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)&#xa;    at java.lang.reflect.Method.invoke(Method.java:597)&#xa;    at org.hibernate.context.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:344)&#xa;    at $Proxy19.save(Unknown Source)&#xa;    at com.example.myproject.MyEntityService.save(MyEntityService.java:59) &lt;-- relevant call (see notes below)&#xa;    at com.example.myproject.MyServlet.doPost(MyServlet.java:164)&#xa;    ... 32 more&#xa;Caused by: java.sql.SQLException: Violation of unique constraint MY_ENTITY_UK_1: duplicate value(s) for column(s) MY_COLUMN in statement [...]&#xa;    at org.hsqldb.jdbc.Util.throwError(Unknown Source)&#xa;    at org.hsqldb.jdbc.jdbcPreparedStatement.executeUpdate(Unknown Source)&#xa;    at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:105)&#xa;    at org.hibernate.id.insert.AbstractSelectingDelegate.performInsert(AbstractSelectingDelegate.java:57)&#xa;    ... 54 more"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
+    </Component>
   </SubComponents>
 </Form>

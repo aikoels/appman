@@ -11,10 +11,16 @@ package com.is4300.appman;
  */
 public class Main extends javax.swing.JFrame {
 
+    //Used for tutorials
+    private boolean firstApp;
+    private boolean firstInfra;
+    
     /**
      * Creates new form Main
      */
     public Main() {
+        this.firstApp = true;
+        this.firstInfra = true;
         this.user = new User();
         initComponents();
     }
@@ -422,13 +428,21 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NewAppButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButtonActionPerformed
-        // TODO add your handling code here:
+
         new CreateNewForm(ComponentType.APPLICATION).setVisible(true);
+        if (this.firstApp) {
+            new PopUp(PopUpType.AppTutorial).setVisible(true);
+            this.firstApp = false;
+        }
     }//GEN-LAST:event_NewAppButtonActionPerformed
 
     private void NewInfraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewInfraButtonActionPerformed
-        // TODO add your handling code here:
+
         new CreateNewForm(ComponentType.INFRASTRUCTURE).setVisible(true);
+        if (this.firstInfra) {
+            new PopUp(PopUpType.InfraTutorial).setVisible(true);
+            this.firstApp = false;
+        }
     }//GEN-LAST:event_NewInfraButtonActionPerformed
 
     private void NewAppButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButton1ActionPerformed
