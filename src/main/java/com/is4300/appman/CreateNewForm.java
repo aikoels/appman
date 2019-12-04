@@ -5,8 +5,8 @@
  */
 package com.is4300.appman;
 
+import java.awt.Graphics;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  *
@@ -14,12 +14,13 @@ import java.util.Map;
  */
 public class CreateNewForm extends javax.swing.JFrame {
 
-    //Type of component being created
-    private ComponentType type;
-    private Map settings;
+    //Type of component being createdo
+    private final ComponentType type;
+    private final HashMap<String, String> settings;
     
     /**
      * Creates new form CreateNewForm
+     * @param type
      */
     public CreateNewForm(ComponentType type) {
         this.type = type;
@@ -30,7 +31,6 @@ public class CreateNewForm extends javax.swing.JFrame {
         else if (type == ComponentType.INFRASTRUCTURE) {
             initNewInfra();
         }
-        //initComponents();
     }
 
     private void initNewApp() {
@@ -55,7 +55,6 @@ public class CreateNewForm extends javax.swing.JFrame {
         AntButton = new javax.swing.JButton();
         WorkBenchWindow = new javax.swing.JSplitPane();
         WorkbenchPanel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         SettingsPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -64,10 +63,19 @@ public class CreateNewForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
         jButton1.setText("Windows10");
+        jButton1.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton1ActionPerformed(evt);
+        });
 
         jButton2.setText("MacOS");
+        jButton2.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton2ActionPerformed(evt);
+        });
 
         jButton3.setText("Ubuntu");
+        jButton3.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton3ActionPerformed(evt);
+        });
 
         javax.swing.GroupLayout OSTabLayout = new javax.swing.GroupLayout(OSTab);
         OSTab.setLayout(OSTabLayout);
@@ -96,33 +104,25 @@ public class CreateNewForm extends javax.swing.JFrame {
         ToolBoxPanel.addTab("Operating System", OSTab);
 
         Python27Button.setText("Python2.7");
-        Python27Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Python27ButtonActionPerformed(evt);
-            }
+        Python27Button.addActionListener((java.awt.event.ActionEvent evt) -> {
+            Python27ButtonActionPerformed(evt);
         });
 
         Java8Button.setText("Java8");
-        Java8Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Java8ButtonActionPerformed(evt);
-            }
+        Java8Button.addActionListener((java.awt.event.ActionEvent evt) -> {
+            Java8ButtonActionPerformed(evt);
         });
 
         Java11Button.setText("Java11");
-        Java11Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Java11ButtonActionPerformed(evt);
-            }
+        Java11Button.addActionListener((java.awt.event.ActionEvent evt) -> {
+            Java11ButtonActionPerformed(evt);
         });
 
         Python3Button.setText("Python3");
-        Python3Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Python3ButtonActionPerformed(evt);
-            }
+        Python3Button.addActionListener((java.awt.event.ActionEvent evt) -> {
+            Python3ButtonActionPerformed(evt);
         });
-
+        
         javax.swing.GroupLayout LanguageTabLayout = new javax.swing.GroupLayout(LanguageTab);
         LanguageTab.setLayout(LanguageTabLayout);
         LanguageTabLayout.setHorizontalGroup(
@@ -153,8 +153,14 @@ public class CreateNewForm extends javax.swing.JFrame {
         ToolBoxPanel.addTab("Language", LanguageTab);
 
         JUnit4Button.setText("JUnit4");
+        JUnit4Button.addActionListener((java.awt.event.ActionEvent evt) -> {
+            JUnit4ButtonActionPerformed(evt);
+        });
 
         JUnit5Button.setText("JUnit5");
+        JUnit5Button.addActionListener((java.awt.event.ActionEvent evt) -> {
+            JUnit5ButtonActionPerformed(evt);
+        });
 
         javax.swing.GroupLayout AdditionalFrameworksLayout = new javax.swing.GroupLayout(AdditionalFrameworks);
         AdditionalFrameworks.setLayout(AdditionalFrameworksLayout);
@@ -180,10 +186,19 @@ public class CreateNewForm extends javax.swing.JFrame {
         ToolBoxPanel.addTab("Additional Frameworks", AdditionalFrameworks);
 
         MavenButton.setText("Maven");
+        MavenButton.addActionListener((java.awt.event.ActionEvent evt) -> {
+            MavenButtonActionPerformed(evt);
+        });
 
         GradleButton.setText("Gradle");
+        GradleButton.addActionListener((java.awt.event.ActionEvent evt) -> {
+            GradleButtonActionPerformed(evt);
+        });
 
         AntButton.setText("Ant");
+        AntButton.addActionListener((java.awt.event.ActionEvent evt) -> {
+            AntButtonActionPerformed(evt);
+        });
 
         javax.swing.GroupLayout BuildToolTabLayout = new javax.swing.GroupLayout(BuildToolTab);
         BuildToolTab.setLayout(BuildToolTabLayout);
@@ -218,25 +233,19 @@ public class CreateNewForm extends javax.swing.JFrame {
         WorkBenchWindow.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
         WorkBenchWindow.setMinimumSize(new java.awt.Dimension(250, 250));
 
-        WorkbenchPanel.setPreferredSize(new java.awt.Dimension(250, 150));
-
-        jLabel2.setText("This Section is a Work in Progress.");
+        WorkbenchPanel.setPreferredSize(new java.awt.Dimension(250, 350));
 
         javax.swing.GroupLayout WorkbenchPanelLayout = new javax.swing.GroupLayout(WorkbenchPanel);
         WorkbenchPanel.setLayout(WorkbenchPanelLayout);
         WorkbenchPanelLayout.setHorizontalGroup(
             WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(WorkbenchPanelLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGap(34, 34, 34).addContainerGap(56, Short.MAX_VALUE))
         );
         WorkbenchPanelLayout.setVerticalGroup(
             WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(WorkbenchPanelLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGap(37, 37, 37).addContainerGap(49, Short.MAX_VALUE))
         );
 
         WorkBenchWindow.setTopComponent(WorkbenchPanel);
@@ -246,10 +255,8 @@ public class CreateNewForm extends javax.swing.JFrame {
         jLabel1.setText("Name:");
 
         jButton4.setText("Create!");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
+        jButton4.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton4ActionPerformed(evt);
         });
 
         javax.swing.GroupLayout SettingsPanelLayout = new javax.swing.GroupLayout(SettingsPanel);
@@ -319,7 +326,6 @@ public class CreateNewForm extends javax.swing.JFrame {
         AntButton = new javax.swing.JButton();
         WorkBenchWindow = new javax.swing.JSplitPane();
         WorkbenchPanel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         SettingsPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -328,10 +334,19 @@ public class CreateNewForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
         jButton1.setText("Windows10");
+        jButton1.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton1ActionPerformed(evt);
+        });
 
         jButton2.setText("MacOS");
+        jButton2.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton2ActionPerformed(evt);
+        });
 
         jButton3.setText("Ubuntu");
+        jButton3.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton3ActionPerformed(evt);
+        });
 
         javax.swing.GroupLayout OSTabLayout = new javax.swing.GroupLayout(OSTab);
         OSTab.setLayout(OSTabLayout);
@@ -360,31 +375,23 @@ public class CreateNewForm extends javax.swing.JFrame {
         ToolBoxPanel.addTab("Operating System", OSTab);
 
         Python27Button.setText("2GB");
-        Python27Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Python27ButtonActionPerformed(evt);
-            }
+        Python27Button.addActionListener((java.awt.event.ActionEvent evt) -> {
+            Python27ButtonActionPerformed(evt);
         });
 
         Java8Button.setText("4GB");
-        Java8Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Java8ButtonActionPerformed(evt);
-            }
+        Java8Button.addActionListener((java.awt.event.ActionEvent evt) -> {
+            Java8ButtonActionPerformed(evt);
         });
 
         Java11Button.setText("6GB");
-        Java11Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Java11ButtonActionPerformed(evt);
-            }
+        Java11Button.addActionListener((java.awt.event.ActionEvent evt) -> {
+            Java11ButtonActionPerformed(evt);
         });
 
         Python3Button.setText("8GB");
-        Python3Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Python3ButtonActionPerformed(evt);
-            }
+        Python3Button.addActionListener((java.awt.event.ActionEvent evt) -> {
+            Python3ButtonActionPerformed(evt);
         });
 
         javax.swing.GroupLayout LanguageTabLayout = new javax.swing.GroupLayout(LanguageTab);
@@ -484,23 +491,17 @@ public class CreateNewForm extends javax.swing.JFrame {
 
         WorkbenchPanel.setPreferredSize(new java.awt.Dimension(250, 150));
 
-        jLabel2.setText("This Section is a Work in Progress.");
-
         javax.swing.GroupLayout WorkbenchPanelLayout = new javax.swing.GroupLayout(WorkbenchPanel);
         WorkbenchPanel.setLayout(WorkbenchPanelLayout);
         WorkbenchPanelLayout.setHorizontalGroup(
             WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(WorkbenchPanelLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGap(34, 34, 34).addContainerGap(56, Short.MAX_VALUE))
         );
         WorkbenchPanelLayout.setVerticalGroup(
             WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(WorkbenchPanelLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGap(37, 37, 37).addContainerGap(49, Short.MAX_VALUE))
         );
 
         WorkBenchWindow.setTopComponent(WorkbenchPanel);
@@ -510,10 +511,8 @@ public class CreateNewForm extends javax.swing.JFrame {
         jLabel1.setText("Name:");
 
         jButton4.setText("Create!");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
+        jButton4.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton4ActionPerformed(evt);
         });
 
         javax.swing.GroupLayout SettingsPanelLayout = new javax.swing.GroupLayout(SettingsPanel);
@@ -588,7 +587,6 @@ public class CreateNewForm extends javax.swing.JFrame {
         AntButton = new javax.swing.JButton();
         WorkBenchWindow = new javax.swing.JSplitPane();
         WorkbenchPanel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         SettingsPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -793,23 +791,15 @@ public class CreateNewForm extends javax.swing.JFrame {
 
         WorkbenchPanel.setPreferredSize(new java.awt.Dimension(250, 150));
 
-        jLabel2.setText("This Section is a Work in Progress.");
-
         javax.swing.GroupLayout WorkbenchPanelLayout = new javax.swing.GroupLayout(WorkbenchPanel);
         WorkbenchPanel.setLayout(WorkbenchPanelLayout);
         WorkbenchPanelLayout.setHorizontalGroup(
             WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WorkbenchPanelLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+            .addGap(0, 248, Short.MAX_VALUE)
         );
         WorkbenchPanelLayout.setVerticalGroup(
             WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WorkbenchPanelLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+            .addGap(0, 150, Short.MAX_VALUE)
         );
 
         WorkBenchWindow.setTopComponent(WorkbenchPanel);
@@ -944,7 +934,24 @@ public class CreateNewForm extends javax.swing.JFrame {
     private void updateWorkbench(){
         //TODO: Create method which draws workbench based on the map
         //          this.settings
-        return;
+        Graphics g = WorkbenchPanel.getGraphics();
+        g.drawString("Operating System:", 25, 25);
+        if (this.settings.get("Operating System") != null) {
+            g.drawString(this.settings.get("Operating System"), 25, 50);
+        }
+        g.drawString("Build Tool:", 25, 75);
+        if (this.settings.get("Build Tool") != null) {
+            g.drawString(this.settings.get("Build Tool"), 25, 100);
+        }
+        g.drawString("Language:", 25, 125);
+        if (this.settings.get("Language") != null) {
+            g.drawString(this.settings.get("Language"), 25, 150);
+        }
+        g.drawString("Additional Frameworks:", 25, 175);
+        if (this.settings.get("Framework") != null) {
+            g.drawString(this.settings.get("Framework"), 25, 200);
+        }
+            
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -970,11 +977,10 @@ public class CreateNewForm extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
-
+    
     private void NewApp() {
         throw new UnsupportedOperationException("Creation of new application "
                 + "is not supported yet."); 
