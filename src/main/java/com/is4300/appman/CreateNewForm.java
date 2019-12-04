@@ -5,6 +5,7 @@
  */
 package com.is4300.appman;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.util.HashMap;
 
@@ -935,21 +936,33 @@ public class CreateNewForm extends javax.swing.JFrame {
         //TODO: Create method which draws workbench based on the map
         //          this.settings
         Graphics g = WorkbenchPanel.getGraphics();
-        g.drawString("Operating System:", 25, 25);
-        if (this.settings.get("Operating System") != null) {
-            g.drawString(this.settings.get("Operating System"), 25, 50);
-        }
-        g.drawString("Build Tool:", 25, 75);
-        if (this.settings.get("Build Tool") != null) {
-            g.drawString(this.settings.get("Build Tool"), 25, 100);
-        }
-        g.drawString("Language:", 25, 125);
-        if (this.settings.get("Language") != null) {
-            g.drawString(this.settings.get("Language"), 25, 150);
-        }
-        g.drawString("Additional Frameworks:", 25, 175);
+        g.drawString("Additional Frameworks:", 25, 25);
         if (this.settings.get("Framework") != null) {
-            g.drawString(this.settings.get("Framework"), 25, 200);
+            g.setColor(Color.GREEN);
+            g.fillRect(25, 38, 150, 25);
+            g.setColor(Color.BLACK);
+            g.drawString(this.settings.get("Framework"), 75, 50);
+        }
+        g.drawString("Language:", 25, 75);
+        if (this.settings.get("Language") != null) {
+            g.setColor(Color.BLUE);
+            g.fillRect(25, 88, 150, 25);
+            g.setColor(Color.BLACK);
+            g.drawString(this.settings.get("Language"), 75, 100);
+        }
+        g.drawString("Build Tool:", 25, 125);
+        if (this.settings.get("Build Tool") != null) {
+            g.setColor(Color.LIGHT_GRAY);
+            g.fillRect(25, 138, 150, 25);
+            g.setColor(Color.BLACK);
+            g.drawString(this.settings.get("Build Tool"), 75, 150);
+        }
+        g.drawString("Operating System:", 25, 175);
+        if (this.settings.get("Operating System") != null) {
+            g.setColor(Color.MAGENTA);
+            g.fillRect(25, 188, 150, 25);
+            g.setColor(Color.BLACK);
+            g.drawString(this.settings.get("Operating System"), 75, 200);
         }
             
     }
