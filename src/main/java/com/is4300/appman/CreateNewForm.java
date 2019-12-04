@@ -597,10 +597,25 @@ public class CreateNewForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("Windows10");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("MacOS");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Ubuntu");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout OSTabLayout = new javax.swing.GroupLayout(OSTab);
         OSTab.setLayout(OSTabLayout);
@@ -686,8 +701,18 @@ public class CreateNewForm extends javax.swing.JFrame {
         ToolBoxPanel.addTab("Language", LanguageTab);
 
         JUnit4Button.setText("JUnit4");
+        JUnit4Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JUnit4ButtonActionPerformed(evt);
+            }
+        });
 
         JUnit5Button.setText("JUnit5");
+        JUnit5Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JUnit5ButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout AdditionalFrameworksLayout = new javax.swing.GroupLayout(AdditionalFrameworks);
         AdditionalFrameworks.setLayout(AdditionalFrameworksLayout);
@@ -713,10 +738,25 @@ public class CreateNewForm extends javax.swing.JFrame {
         ToolBoxPanel.addTab("Additional Frameworks", AdditionalFrameworks);
 
         MavenButton.setText("Maven");
+        MavenButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MavenButtonActionPerformed(evt);
+            }
+        });
 
         GradleButton.setText("Gradle");
+        GradleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GradleButtonActionPerformed(evt);
+            }
+        });
 
         AntButton.setText("Ant");
+        AntButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AntButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout BuildToolTabLayout = new javax.swing.GroupLayout(BuildToolTab);
         BuildToolTab.setLayout(BuildToolTabLayout);
@@ -830,29 +870,30 @@ public class CreateNewForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Python27ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Python27ButtonActionPerformed
-        // TODO add your handling code here:
         this.settings.put("Language", "Python2.7");
+        updateWorkbench();
     }//GEN-LAST:event_Python27ButtonActionPerformed
 
     private void Python3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Python3ButtonActionPerformed
-        // TODO add your handling code here:
         this.settings.put("Language", "Python3");
+        updateWorkbench();
     }//GEN-LAST:event_Python3ButtonActionPerformed
 
     private void Java11ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Java11ButtonActionPerformed
-        // TODO add your handling code here:
         this.settings.put("Language", "Java11");
+        updateWorkbench();
     }//GEN-LAST:event_Java11ButtonActionPerformed
 
     private void Java8ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Java8ButtonActionPerformed
-        // TODO add your handling code here:
         this.settings.put("Language", "Java8");
+        updateWorkbench();
     }//GEN-LAST:event_Java8ButtonActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        this.settings.put("Name", jTextField1.getText());
         if (this.type == ComponentType.APPLICATION){
             new PopUp(PopUpType.NewApp).setVisible(true);
+            NewApp();
         }
         else if (this.type == ComponentType.INFRASTRUCTURE){
             new PopUp(PopUpType.NewInfra).setVisible(true);
@@ -860,6 +901,51 @@ public class CreateNewForm extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.settings.put("Operating System", "Windows10");
+        updateWorkbench();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.settings.put("Operating System", "MacOS");
+        updateWorkbench();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        this.settings.put("Operating System", "Ubuntu");
+        updateWorkbench();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void JUnit4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JUnit4ButtonActionPerformed
+        this.settings.put("Framework", "JUnit4");
+        updateWorkbench();
+    }//GEN-LAST:event_JUnit4ButtonActionPerformed
+
+    private void JUnit5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JUnit5ButtonActionPerformed
+        this.settings.put("Framework", "JUnit5");
+        updateWorkbench();
+    }//GEN-LAST:event_JUnit5ButtonActionPerformed
+
+    private void MavenButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MavenButtonActionPerformed
+        this.settings.put("Build Tool", "Maven");
+        updateWorkbench();
+    }//GEN-LAST:event_MavenButtonActionPerformed
+
+    private void GradleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GradleButtonActionPerformed
+        this.settings.put("Build Tool", "Gradle");
+        updateWorkbench();
+    }//GEN-LAST:event_GradleButtonActionPerformed
+
+    private void AntButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AntButtonActionPerformed
+        this.settings.put("Build Tool", "Ant");
+        updateWorkbench();
+    }//GEN-LAST:event_AntButtonActionPerformed
+
+    private void updateWorkbench(){
+        //TODO: Create method which draws workbench based on the map
+        //          this.settings
+        return;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AdditionalFrameworks;
@@ -888,5 +974,10 @@ public class CreateNewForm extends javax.swing.JFrame {
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    private void NewApp() {
+        throw new UnsupportedOperationException("Creation of new application "
+                + "is not supported yet."); 
+    }
 
 }
