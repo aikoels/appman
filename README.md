@@ -37,23 +37,25 @@ A local interface which simulates the functionality of appman.
 This was built for IS4300 at Northeastern University for the Fall 2019 semester. 
 
 ## Using AppMan
-Talk about the lego metaphor.
-
 ### Creating a New Application
-1. From the homepage, select...
-2. ...
+1. From the homepage, select "Create New Application!"
+
+   or
+
+2. From the homepage, select the "Infrastructure" tab at the top and then select "Create New Application!"
 
 ### Creating a New Server or Virtual Machine
-1. From the homepage, select...
-2. ...
+1. From the homepage, select "Create New Infrastructure!"
+
+   or
+
+1. From the homepage, select the "Infrastructure" tab at the top and then select "Create New Infrastructure!"
 
 ### Monitoring Your Applications
-1. From the homepage, select...
-2. ...
+1. From the homepage, select the "Applications" tab at the top.
 
 ### Monitoring Your Infrastructure
-1. From the homepage, select...
-2. ...
+1. From the homepage, select the "Infrastructure" tab at the top.
 
 
 
