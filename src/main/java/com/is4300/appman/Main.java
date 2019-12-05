@@ -14,7 +14,7 @@ public class Main extends javax.swing.JFrame {
     //Used for tutorials
     private boolean firstApp;
     private boolean firstInfra;
-    
+
     /**
      * Creates new form Main
      */
@@ -535,7 +535,7 @@ public class Main extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
             new Main().setVisible(true);
@@ -543,7 +543,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     private final User user;
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AppTab;
     private javax.swing.JPanel DashTab;

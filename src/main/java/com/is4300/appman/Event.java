@@ -16,7 +16,7 @@ class Event {
         this.message = message;
         this.status = status;
     }
-    
+
     long time;
     String message;
     Status status;

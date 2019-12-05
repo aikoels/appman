@@ -31,6 +31,7 @@ public abstract class AComponent {
     /**
      * Creates AComponent using the supplied configuration and logs the
      * creation.
+     *
      * @param owner
      * @param type
      */
@@ -42,25 +43,24 @@ public abstract class AComponent {
             this.config = new HashMap<>();
             this.owner = owner;
             this.status = SUCCESS;
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             //Error in Creation
             this.status = ERROR;
             this.log.add(new Event(ERROR, e.getMessage(), System.currentTimeMillis()));
         }
     }
-    
+
     /**
-     * Sets the specified component in the config. Logs an error if it 
-     * cannot set that component.
+     * Sets the specified component in the config. Logs an error if it cannot
+     * set that component.
+     *
      * @param key - The key for the config value
      * @param value - the value to set the config to.
      */
     protected void setConfig(String key, String value) {
         try {
             this.config.put(key, value);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             //Error in setting config
             this.status = ERROR;
             this.log.add(new Event(ERROR, e.getMessage(), System.currentTimeMillis()));
@@ -76,7 +76,7 @@ public abstract class AComponent {
      */
     protected JFrame frame(WindowSize size) {
         //TODO: Currently a stub. Implement.
-        
+
         return null;
     }
 }

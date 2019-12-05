@@ -18,9 +18,10 @@ public class CreateNewForm extends javax.swing.JFrame {
     //Type of component being createdo
     private final ComponentType type;
     private final HashMap<String, String> settings;
-    
+
     /**
      * Creates new form CreateNewForm
+     *
      * @param type
      */
     public CreateNewForm(ComponentType type) {
@@ -28,14 +29,13 @@ public class CreateNewForm extends javax.swing.JFrame {
         this.settings = new HashMap();
         if (type == ComponentType.APPLICATION) {
             initNewApp();
-        }
-        else if (type == ComponentType.INFRASTRUCTURE) {
+        } else if (type == ComponentType.INFRASTRUCTURE) {
             initNewInfra();
         }
     }
 
     private void initNewApp() {
-        
+
         jSplitPane1 = new javax.swing.JSplitPane();
         ToolBoxPanel = new javax.swing.JTabbedPane();
         OSTab = new javax.swing.JPanel();
@@ -60,7 +60,7 @@ public class CreateNewForm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        
+
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
         jButton1.setText("Windows10");
@@ -81,25 +81,25 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout OSTabLayout = new javax.swing.GroupLayout(OSTab);
         OSTab.setLayout(OSTabLayout);
         OSTabLayout.setHorizontalGroup(
-            OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OSTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
-                .addContainerGap())
+                OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(OSTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
+                                .addContainerGap())
         );
         OSTabLayout.setVerticalGroup(
-            OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OSTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
-                .addContainerGap(108, Short.MAX_VALUE))
+                OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(OSTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton3)
+                                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         ToolBoxPanel.addTab("Operating System", OSTab);
@@ -123,32 +123,32 @@ public class CreateNewForm extends javax.swing.JFrame {
         Python3Button.addActionListener((java.awt.event.ActionEvent evt) -> {
             Python3ButtonActionPerformed(evt);
         });
-        
+
         javax.swing.GroupLayout LanguageTabLayout = new javax.swing.GroupLayout(LanguageTab);
         LanguageTab.setLayout(LanguageTabLayout);
         LanguageTabLayout.setHorizontalGroup(
-            LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LanguageTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Java8Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Python27Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                    .addComponent(Java11Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Python3Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(LanguageTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(Java8Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Python27Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                        .addComponent(Java11Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Python3Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())
         );
         LanguageTabLayout.setVerticalGroup(
-            LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LanguageTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Python27Button, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Python3Button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Java8Button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Java11Button)
-                .addContainerGap(81, Short.MAX_VALUE))
+                LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(LanguageTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(Python27Button, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Python3Button)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Java8Button)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Java11Button)
+                                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         ToolBoxPanel.addTab("Language", LanguageTab);
@@ -166,22 +166,22 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout AdditionalFrameworksLayout = new javax.swing.GroupLayout(AdditionalFrameworks);
         AdditionalFrameworks.setLayout(AdditionalFrameworksLayout);
         AdditionalFrameworksLayout.setHorizontalGroup(
-            AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdditionalFrameworksLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(JUnit4Button)
-                .addGap(18, 18, 18)
-                .addComponent(JUnit5Button, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                .addContainerGap())
+                AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(AdditionalFrameworksLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(JUnit4Button)
+                                .addGap(18, 18, 18)
+                                .addComponent(JUnit5Button, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                                .addContainerGap())
         );
         AdditionalFrameworksLayout.setVerticalGroup(
-            AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdditionalFrameworksLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JUnit4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JUnit5Button))
-                .addContainerGap(162, Short.MAX_VALUE))
+                AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(AdditionalFrameworksLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(JUnit4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(JUnit5Button))
+                                .addContainerGap(162, Short.MAX_VALUE))
         );
 
         ToolBoxPanel.addTab("Additional Frameworks", AdditionalFrameworks);
@@ -204,27 +204,27 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout BuildToolTabLayout = new javax.swing.GroupLayout(BuildToolTab);
         BuildToolTab.setLayout(BuildToolTabLayout);
         BuildToolTabLayout.setHorizontalGroup(
-            BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BuildToolTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BuildToolTabLayout.createSequentialGroup()
-                        .addComponent(MavenButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(GradleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(AntButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(BuildToolTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(BuildToolTabLayout.createSequentialGroup()
+                                                .addComponent(MavenButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(GradleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(AntButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(14, Short.MAX_VALUE))
         );
         BuildToolTabLayout.setVerticalGroup(
-            BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BuildToolTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MavenButton)
-                    .addComponent(GradleButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(AntButton)
-                .addContainerGap(131, Short.MAX_VALUE))
+                BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(BuildToolTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(MavenButton)
+                                        .addComponent(GradleButton))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(AntButton)
+                                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         ToolBoxPanel.addTab("Build Tools", BuildToolTab);
@@ -239,14 +239,14 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout WorkbenchPanelLayout = new javax.swing.GroupLayout(WorkbenchPanel);
         WorkbenchPanel.setLayout(WorkbenchPanelLayout);
         WorkbenchPanelLayout.setHorizontalGroup(
-            WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WorkbenchPanelLayout.createSequentialGroup()
-                .addGap(34, 34, 34).addContainerGap(56, Short.MAX_VALUE))
+                WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(WorkbenchPanelLayout.createSequentialGroup()
+                                .addGap(34, 34, 34).addContainerGap(56, Short.MAX_VALUE))
         );
         WorkbenchPanelLayout.setVerticalGroup(
-            WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WorkbenchPanelLayout.createSequentialGroup()
-                .addGap(37, 37, 37).addContainerGap(49, Short.MAX_VALUE))
+                WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(WorkbenchPanelLayout.createSequentialGroup()
+                                .addGap(37, 37, 37).addContainerGap(49, Short.MAX_VALUE))
         );
 
         WorkBenchWindow.setTopComponent(WorkbenchPanel);
@@ -263,27 +263,27 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout SettingsPanelLayout = new javax.swing.GroupLayout(SettingsPanel);
         SettingsPanel.setLayout(SettingsPanelLayout);
         SettingsPanelLayout.setHorizontalGroup(
-            SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SettingsPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SettingsPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(80, Short.MAX_VALUE))
+                SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(SettingsPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(SettingsPanelLayout.createSequentialGroup()
+                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(80, Short.MAX_VALUE))
         );
         SettingsPanelLayout.setVerticalGroup(
-            SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SettingsPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addContainerGap())
+                SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(SettingsPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                                .addComponent(jButton4)
+                                .addContainerGap())
         );
 
         WorkBenchWindow.setRightComponent(SettingsPanel);
@@ -293,20 +293,19 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSplitPane1)
         );
 
         pack();
     }
-    
-    
+
     private void initNewInfra() {
-        
+
         jSplitPane1 = new javax.swing.JSplitPane();
         ToolBoxPanel = new javax.swing.JTabbedPane();
         OSTab = new javax.swing.JPanel();
@@ -352,25 +351,25 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout OSTabLayout = new javax.swing.GroupLayout(OSTab);
         OSTab.setLayout(OSTabLayout);
         OSTabLayout.setHorizontalGroup(
-            OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OSTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
-                .addContainerGap())
+                OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(OSTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
+                                .addContainerGap())
         );
         OSTabLayout.setVerticalGroup(
-            OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OSTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
-                .addContainerGap(108, Short.MAX_VALUE))
+                OSTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(OSTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton3)
+                                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         ToolBoxPanel.addTab("Operating System", OSTab);
@@ -398,28 +397,28 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout LanguageTabLayout = new javax.swing.GroupLayout(LanguageTab);
         LanguageTab.setLayout(LanguageTabLayout);
         LanguageTabLayout.setHorizontalGroup(
-            LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LanguageTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Java8Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Python27Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                    .addComponent(Java11Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Python3Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(LanguageTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(Java8Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Python27Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                        .addComponent(Java11Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Python3Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())
         );
         LanguageTabLayout.setVerticalGroup(
-            LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LanguageTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Python27Button, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Python3Button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Java8Button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Java11Button)
-                .addContainerGap(81, Short.MAX_VALUE))
+                LanguageTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(LanguageTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(Python27Button, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Python3Button)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Java8Button)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Java11Button)
+                                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         ToolBoxPanel.addTab("RAM", LanguageTab);
@@ -431,22 +430,22 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout AdditionalFrameworksLayout = new javax.swing.GroupLayout(AdditionalFrameworks);
         AdditionalFrameworks.setLayout(AdditionalFrameworksLayout);
         AdditionalFrameworksLayout.setHorizontalGroup(
-            AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdditionalFrameworksLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(JUnit4Button, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                    .addComponent(JUnit5Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdditionalFrameworksLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(JUnit4Button, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                        .addComponent(JUnit5Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())
         );
         AdditionalFrameworksLayout.setVerticalGroup(
-            AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdditionalFrameworksLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(JUnit4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(JUnit5Button)
-                .addContainerGap(131, Short.MAX_VALUE))
+                AdditionalFrameworksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(AdditionalFrameworksLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(JUnit4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(JUnit5Button)
+                                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         ToolBoxPanel.addTab("Infrastructure Type", AdditionalFrameworks);
@@ -460,27 +459,27 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout BuildToolTabLayout = new javax.swing.GroupLayout(BuildToolTab);
         BuildToolTab.setLayout(BuildToolTabLayout);
         BuildToolTabLayout.setHorizontalGroup(
-            BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BuildToolTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BuildToolTabLayout.createSequentialGroup()
-                        .addComponent(MavenButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(GradleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(AntButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(BuildToolTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(BuildToolTabLayout.createSequentialGroup()
+                                                .addComponent(MavenButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(GradleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(AntButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(14, Short.MAX_VALUE))
         );
         BuildToolTabLayout.setVerticalGroup(
-            BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BuildToolTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MavenButton)
-                    .addComponent(GradleButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(AntButton)
-                .addContainerGap(131, Short.MAX_VALUE))
+                BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(BuildToolTabLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(BuildToolTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(MavenButton)
+                                        .addComponent(GradleButton))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(AntButton)
+                                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         ToolBoxPanel.addTab("Storage", BuildToolTab);
@@ -495,14 +494,14 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout WorkbenchPanelLayout = new javax.swing.GroupLayout(WorkbenchPanel);
         WorkbenchPanel.setLayout(WorkbenchPanelLayout);
         WorkbenchPanelLayout.setHorizontalGroup(
-            WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WorkbenchPanelLayout.createSequentialGroup()
-                .addGap(34, 34, 34).addContainerGap(56, Short.MAX_VALUE))
+                WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(WorkbenchPanelLayout.createSequentialGroup()
+                                .addGap(34, 34, 34).addContainerGap(56, Short.MAX_VALUE))
         );
         WorkbenchPanelLayout.setVerticalGroup(
-            WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WorkbenchPanelLayout.createSequentialGroup()
-                .addGap(37, 37, 37).addContainerGap(49, Short.MAX_VALUE))
+                WorkbenchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(WorkbenchPanelLayout.createSequentialGroup()
+                                .addGap(37, 37, 37).addContainerGap(49, Short.MAX_VALUE))
         );
 
         WorkBenchWindow.setTopComponent(WorkbenchPanel);
@@ -519,27 +518,27 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout SettingsPanelLayout = new javax.swing.GroupLayout(SettingsPanel);
         SettingsPanel.setLayout(SettingsPanelLayout);
         SettingsPanelLayout.setHorizontalGroup(
-            SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SettingsPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SettingsPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(80, Short.MAX_VALUE))
+                SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(SettingsPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(SettingsPanelLayout.createSequentialGroup()
+                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(80, Short.MAX_VALUE))
         );
         SettingsPanelLayout.setVerticalGroup(
-            SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SettingsPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addContainerGap())
+                SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(SettingsPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(SettingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                                .addComponent(jButton4)
+                                .addContainerGap())
         );
 
         WorkBenchWindow.setRightComponent(SettingsPanel);
@@ -549,16 +548,17 @@ public class CreateNewForm extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSplitPane1)
         );
 
         pack();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -883,11 +883,10 @@ public class CreateNewForm extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.settings.put("Name", jTextField1.getText());
         this.setVisible(false);
-        if (this.type == ComponentType.APPLICATION){
+        if (this.type == ComponentType.APPLICATION) {
             new PopUp(PopUpType.NewApp).setVisible(true);
             NewApp();
-        }
-        else if (this.type == ComponentType.INFRASTRUCTURE){
+        } else if (this.type == ComponentType.INFRASTRUCTURE) {
             new PopUp(PopUpType.NewInfra).setVisible(true);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -932,7 +931,7 @@ public class CreateNewForm extends javax.swing.JFrame {
         updateWorkbench();
     }//GEN-LAST:event_AntButtonActionPerformed
 
-    private void updateWorkbench(){
+    private void updateWorkbench() {
         //TODO: Create method which draws workbench based on the map
         //          this.settings
         Graphics g = WorkbenchPanel.getGraphics();
@@ -964,7 +963,7 @@ public class CreateNewForm extends javax.swing.JFrame {
             g.setColor(Color.BLACK);
             g.drawString(this.settings.get("Operating System"), 75, 200);
         }
-            
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -993,10 +992,10 @@ public class CreateNewForm extends javax.swing.JFrame {
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
-    
+
     private void NewApp() {
         throw new UnsupportedOperationException("Creation of new application "
-                + "is not supported yet."); 
+                + "is not supported yet.");
     }
 
 }
