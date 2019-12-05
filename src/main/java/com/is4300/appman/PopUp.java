@@ -39,12 +39,10 @@ public class PopUp extends javax.swing.JFrame {
                 initErrorInfra();
                 break;
             case InfraTutorial:
-                System.out.println("TEST");
                 initTutorial();
                 break;
             case AppTutorial:
                 initTutorial();
-                System.out.println("TEST");
                 break;
             default:
                 break;
@@ -65,10 +63,8 @@ public class PopUp extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         jButton1.setText("Ignore");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
+        jButton1.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton1ActionPerformed(evt);
         });
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -81,10 +77,8 @@ public class PopUp extends javax.swing.JFrame {
         jLabel4.setText("Error: 500 HTTPS");
 
         jButton2.setText("Go To Error");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
+        jButton2.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton2ActionPerformed(evt);
         });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -133,10 +127,8 @@ public class PopUp extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         jButton1.setText("Ignore");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
+        jButton1.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton1ActionPerformed(evt);
         });
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -149,10 +141,8 @@ public class PopUp extends javax.swing.JFrame {
         jLabel4.setText("Error: 500 HTTPS");
 
         jButton2.setText("Go To Error");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
+        jButton2.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton2ActionPerformed(evt);
         });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -267,10 +257,8 @@ public class PopUp extends javax.swing.JFrame {
         jLabel1.setText("Connect through SSH @ 1.1.1.1");
 
         jButton1.setText("Close");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
+        jButton1.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton1ActionPerformed(evt);
         });
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -322,10 +310,8 @@ public class PopUp extends javax.swing.JFrame {
         jLabel1.setText("You have created a new application!");
 
         jButton1.setText("Close");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
+        jButton1.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton1ActionPerformed(evt);
         });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
