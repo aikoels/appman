@@ -5,8 +5,6 @@
  */
 package com.is4300.appman;
 
-import java.sql.Time;
-
 /**
  *
  * @author quinc

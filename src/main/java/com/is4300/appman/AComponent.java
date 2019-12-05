@@ -31,15 +31,17 @@ public abstract class AComponent {
     /**
      * Creates AComponent using the supplied configuration and logs the
      * creation.
+     * @param owner
+     * @param type
      */
     public AComponent(User owner, ComponentType type) {
+        this.log = new ArrayList();
         try {
             //Successful Creation
             this.type = type;
-            this.config = new HashMap<String, String>();
+            this.config = new HashMap<>();
             this.owner = owner;
             this.status = SUCCESS;
-            this.log = new ArrayList();
         }
         catch (Exception e){
             //Error in Creation
