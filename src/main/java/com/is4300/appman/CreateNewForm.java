@@ -882,6 +882,7 @@ public class CreateNewForm extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.settings.put("Name", jTextField1.getText());
+        this.setVisible(false);
         if (this.type == ComponentType.APPLICATION){
             new PopUp(PopUpType.NewApp).setVisible(true);
             NewApp();
@@ -889,7 +890,6 @@ public class CreateNewForm extends javax.swing.JFrame {
         else if (this.type == ComponentType.INFRASTRUCTURE){
             new PopUp(PopUpType.NewInfra).setVisible(true);
         }
-        this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

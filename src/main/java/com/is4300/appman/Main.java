@@ -441,7 +441,7 @@ public class Main extends javax.swing.JFrame {
         new CreateNewForm(ComponentType.INFRASTRUCTURE).setVisible(true);
         if (this.firstInfra) {
             new PopUp(PopUpType.InfraTutorial).setVisible(true);
-            this.firstApp = false;
+            this.firstInfra = false;
         }
     }//GEN-LAST:event_NewInfraButtonActionPerformed
 
@@ -484,11 +484,19 @@ public class Main extends javax.swing.JFrame {
     private void NewInfraButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewInfraButton1ActionPerformed
         // TODO add your handling code here:
         new CreateNewForm(ComponentType.INFRASTRUCTURE).setVisible(true);
+        if (this.firstInfra) {
+            new PopUp(PopUpType.InfraTutorial).setVisible(true);
+            this.firstInfra = false;
+        }
     }//GEN-LAST:event_NewInfraButton1ActionPerformed
 
     private void NewAppButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButton5ActionPerformed
         // TODO add your handling code here:
         new CreateNewForm(ComponentType.APPLICATION).setVisible(true);
+        if (this.firstApp) {
+            new PopUp(PopUpType.AppTutorial).setVisible(true);
+            this.firstApp = false;
+        }
     }//GEN-LAST:event_NewAppButton5ActionPerformed
 
     private void NewAppButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAppButton6ActionPerformed
