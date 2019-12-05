@@ -537,14 +537,12 @@ public class Main extends javax.swing.JFrame {
         //</editor-fold>
         
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Main().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Main().setVisible(true);
         });
     }
 
-    private User user;
+    private final User user;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AppTab;
