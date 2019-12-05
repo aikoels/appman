@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.is4300</groupId>
     <artifactId>appMan</artifactId>
-    <version>1.8-SNAPSHOT</version>
+    <version>1.8-RELEASE</version>
     <packaging>jar</packaging>
     
     
